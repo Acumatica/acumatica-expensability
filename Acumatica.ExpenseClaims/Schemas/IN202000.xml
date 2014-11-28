@@ -1,0 +1,1022 @@
+<?xml version="1.0"?>
+<Content xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Actions xmlns="http://www.acumatica.com/typed/">
+    <Save>
+      <FieldName>Save</FieldName>
+      <ObjectName>Item</ObjectName>
+    </Save>
+    <Cancel>
+      <FieldName>Cancel</FieldName>
+      <ObjectName>Item</ObjectName>
+    </Cancel>
+    <Insert>
+      <FieldName>Insert</FieldName>
+      <ObjectName>Item</ObjectName>
+    </Insert>
+    <CopyDocumentEdit>
+      <FieldName>CopyDocument@Edit</FieldName>
+      <ObjectName>Item</ObjectName>
+    </CopyDocumentEdit>
+    <PasteDocumentEdit>
+      <FieldName>PasteDocument@Edit</FieldName>
+      <ObjectName>Item</ObjectName>
+    </PasteDocumentEdit>
+    <SaveTemplateEdit>
+      <FieldName>SaveTemplate@Edit</FieldName>
+      <ObjectName>Item</ObjectName>
+    </SaveTemplateEdit>
+    <Delete>
+      <FieldName>Delete</FieldName>
+      <ObjectName>Item</ObjectName>
+    </Delete>
+    <First>
+      <FieldName>First</FieldName>
+      <ObjectName>Item</ObjectName>
+    </First>
+    <Prev>
+      <FieldName>Prev</FieldName>
+      <ObjectName>Item</ObjectName>
+    </Prev>
+    <Next>
+      <FieldName>Next</FieldName>
+      <ObjectName>Item</ObjectName>
+    </Next>
+    <Last>
+      <FieldName>Last</FieldName>
+      <ObjectName>Item</ObjectName>
+    </Last>
+    <ChangeID>
+      <FieldName>ChangeID</FieldName>
+      <ObjectName>Item</ObjectName>
+    </ChangeID>
+    <UpdateCostAction>
+      <FieldName>Update Cost@Action</FieldName>
+      <ObjectName>Item</ObjectName>
+    </UpdateCostAction>
+    <ViewRestrictionGroupsAction>
+      <FieldName>View Restriction Groups@Action</FieldName>
+      <ObjectName>Item</ObjectName>
+    </ViewRestrictionGroupsAction>
+    <SalesPricesInquiry>
+      <FieldName>Sales Prices@Inquiry</FieldName>
+      <ObjectName>Item</ObjectName>
+    </SalesPricesInquiry>
+    <VendorPricesInquiry>
+      <FieldName>Vendor Prices@Inquiry</FieldName>
+      <ObjectName>Item</ObjectName>
+    </VendorPricesInquiry>
+  </Actions>
+  <NonStockItemSummary xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Non-Stock Item Summary</DisplayName>
+    <InventoryID>
+      <FieldName>InventoryCD</FieldName>
+      <ObjectName>Item</ObjectName>
+      <Value>InventoryID</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Action">
+        <FieldName>Cancel</FieldName>
+        <ObjectName>Item</ObjectName>
+        <LinkedCommand xsi:type="Key">
+          <FieldName>InventoryCD</FieldName>
+          <ObjectName>Item</ObjectName>
+          <Value>=[Item.InventoryCD]</Value>
+        </LinkedCommand>
+      </LinkedCommand>
+    </InventoryID>
+    <ItemStatus>
+      <FieldName>ItemStatus</FieldName>
+      <ObjectName>Item</ObjectName>
+      <Value>ItemStatus</Value>
+    </ItemStatus>
+    <Description>
+      <FieldName>Descr</FieldName>
+      <ObjectName>Item</ObjectName>
+      <Value>Description</Value>
+    </Description>
+    <ProductWorkgroup>
+      <FieldName>ProductWorkgroupID</FieldName>
+      <ObjectName>Item</ObjectName>
+      <Value>ProductWorkgroup</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>InventoryCD</FieldName>
+        <ObjectName>Item</ObjectName>
+        <Value>=[Item.InventoryCD]</Value>
+      </LinkedCommand>
+    </ProductWorkgroup>
+    <ProductManager>
+      <FieldName>ProductManagerID</FieldName>
+      <ObjectName>Item</ObjectName>
+      <Value>ProductManager</Value>
+    </ProductManager>
+    <NoteText>
+      <FieldName>NoteText</FieldName>
+      <ObjectName>Item</ObjectName>
+      <Value>NoteText</Value>
+    </NoteText>
+    <ServiceCommands>
+      <KeyInventoryID>
+        <FieldName>InventoryCD</FieldName>
+        <ObjectName>Item</ObjectName>
+        <Value>=[Item.InventoryCD]</Value>
+      </KeyInventoryID>
+      <EveryInventoryID>
+        <FieldName>InventoryCD</FieldName>
+        <ObjectName>Item</ObjectName>
+        <Commit>true</Commit>
+        <LinkedCommand xsi:type="Action">
+          <FieldName>Cancel</FieldName>
+          <ObjectName>Item</ObjectName>
+          <LinkedCommand xsi:type="Key">
+            <FieldName>InventoryCD</FieldName>
+            <ObjectName>Item</ObjectName>
+            <Value>=[Item.InventoryCD]</Value>
+          </LinkedCommand>
+        </LinkedCommand>
+      </EveryInventoryID>
+      <DeleteRow>
+        <ObjectName>Item</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>Item</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>Item</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </NonStockItemSummary>
+  <GeneralSettingsItemDefaults xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Item Defaults</DisplayName>
+    <ItemClass>
+      <FieldName>ItemClassID</FieldName>
+      <ObjectName>ItemSettings</ObjectName>
+      <Value>ItemClass</Value>
+      <Commit>true</Commit>
+    </ItemClass>
+    <Type>
+      <FieldName>ItemType</FieldName>
+      <ObjectName>ItemSettings</ObjectName>
+      <Value>Type</Value>
+    </Type>
+    <PostingClass>
+      <FieldName>PostClassID</FieldName>
+      <ObjectName>ItemSettings</ObjectName>
+      <Value>PostingClass</Value>
+      <Commit>true</Commit>
+    </PostingClass>
+    <IsAKit>
+      <FieldName>KitItem</FieldName>
+      <ObjectName>ItemSettings</ObjectName>
+      <Value>IsAKit</Value>
+    </IsAKit>
+    <TaxCategory>
+      <FieldName>TaxCategoryID</FieldName>
+      <ObjectName>ItemSettings</ObjectName>
+      <Value>TaxCategory</Value>
+    </TaxCategory>
+    <DefaultWarehouse>
+      <FieldName>DfltSiteID</FieldName>
+      <ObjectName>ItemSettings</ObjectName>
+      <Value>DefaultWarehouse</Value>
+    </DefaultWarehouse>
+    <RequireReceipt>
+      <FieldName>NonStockReceipt</FieldName>
+      <ObjectName>ItemSettings</ObjectName>
+      <Value>RequireReceipt</Value>
+      <Commit>true</Commit>
+    </RequireReceipt>
+    <RequireShipment>
+      <FieldName>NonStockShip</FieldName>
+      <ObjectName>ItemSettings</ObjectName>
+      <Value>RequireShipment</Value>
+    </RequireShipment>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </GeneralSettingsItemDefaults>
+  <GeneralSettingsUnitOfMeasureBaseUnit xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Base Unit</DisplayName>
+    <BaseUnit>
+      <FieldName>BaseUnit</FieldName>
+      <ObjectName>ItemSettings: 1</ObjectName>
+      <Value>BaseUnit</Value>
+      <Commit>true</Commit>
+    </BaseUnit>
+    <SalesUnit>
+      <FieldName>SalesUnit</FieldName>
+      <ObjectName>ItemSettings: 1</ObjectName>
+      <Value>SalesUnit</Value>
+      <Commit>true</Commit>
+    </SalesUnit>
+    <PurchaseUnit>
+      <FieldName>PurchaseUnit</FieldName>
+      <ObjectName>ItemSettings: 1</ObjectName>
+      <Value>PurchaseUnit</Value>
+      <Commit>true</Commit>
+    </PurchaseUnit>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 1</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 1</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 1</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </GeneralSettingsUnitOfMeasureBaseUnit>
+  <PriceCostInformationPriceManagement xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Price Management</DisplayName>
+    <PriceClass>
+      <FieldName>PriceClassID</FieldName>
+      <ObjectName>ItemSettings: 2</ObjectName>
+      <Value>PriceClass</Value>
+    </PriceClass>
+    <PriceWorkgroup>
+      <FieldName>PriceWorkgroupID</FieldName>
+      <ObjectName>ItemSettings: 2</ObjectName>
+      <Value>PriceWorkgroup</Value>
+      <Commit>true</Commit>
+    </PriceWorkgroup>
+    <PriceManager>
+      <FieldName>PriceManagerID</FieldName>
+      <ObjectName>ItemSettings: 2</ObjectName>
+      <Value>PriceManager</Value>
+    </PriceManager>
+    <SubjectToCommission>
+      <FieldName>Commisionable</FieldName>
+      <ObjectName>ItemSettings: 2</ObjectName>
+      <Value>SubjectToCommission</Value>
+    </SubjectToCommission>
+    <MinMarkup>
+      <FieldName>MinGrossProfitPct</FieldName>
+      <ObjectName>ItemSettings: 2</ObjectName>
+      <Value>MinMarkup</Value>
+    </MinMarkup>
+    <Markup>
+      <FieldName>MarkupPct</FieldName>
+      <ObjectName>ItemSettings: 2</ObjectName>
+      <Value>Markup</Value>
+    </Markup>
+    <MSRP>
+      <FieldName>RecPrice</FieldName>
+      <ObjectName>ItemSettings: 2</ObjectName>
+      <Value>MSRP</Value>
+    </MSRP>
+    <DefaultPrice>
+      <FieldName>BasePrice</FieldName>
+      <ObjectName>ItemSettings: 2</ObjectName>
+      <Value>DefaultPrice</Value>
+    </DefaultPrice>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 2</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 2</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 2</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </PriceCostInformationPriceManagement>
+  <PriceCostInformationRUTAndRUTSettings xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>RUT and RUT Settings</DisplayName>
+    <ROTOrRUTDeductibleItem>
+      <FieldName>IsRUTROTDeductible</FieldName>
+      <ObjectName>ItemSettings: 3</ObjectName>
+      <Value>ROTOrRUTDeductibleItem</Value>
+      <Commit>true</Commit>
+    </ROTOrRUTDeductibleItem>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 3</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 3</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 3</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </PriceCostInformationRUTAndRUTSettings>
+  <PriceCostInformationStandardCost xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Standard Cost</DisplayName>
+    <PendingCost>
+      <FieldName>PendingStdCost</FieldName>
+      <ObjectName>ItemSettings: 4</ObjectName>
+      <Value>PendingCost</Value>
+    </PendingCost>
+    <PendingCostDate>
+      <FieldName>PendingStdCostDate</FieldName>
+      <ObjectName>ItemSettings: 4</ObjectName>
+      <Value>PendingCostDate</Value>
+    </PendingCostDate>
+    <CurrentCost>
+      <FieldName>StdCost</FieldName>
+      <ObjectName>ItemSettings: 4</ObjectName>
+      <Value>CurrentCost</Value>
+    </CurrentCost>
+    <EffectiveDate>
+      <FieldName>StdCostDate</FieldName>
+      <ObjectName>ItemSettings: 4</ObjectName>
+      <Value>EffectiveDate</Value>
+    </EffectiveDate>
+    <LastCost>
+      <FieldName>LastStdCost</FieldName>
+      <ObjectName>ItemSettings: 4</ObjectName>
+      <Value>LastCost</Value>
+      <Commit>true</Commit>
+    </LastCost>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 4</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 4</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 4</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </PriceCostInformationStandardCost>
+  <PackagingDimensions xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Dimensions</DisplayName>
+    <Weight>
+      <FieldName>BaseItemWeight</FieldName>
+      <ObjectName>ItemSettings: 5</ObjectName>
+      <Value>Weight</Value>
+    </Weight>
+    <WeightUOM>
+      <FieldName>WeightUOM</FieldName>
+      <ObjectName>ItemSettings: 5</ObjectName>
+      <Value>WeightUOM</Value>
+    </WeightUOM>
+    <Volume>
+      <FieldName>BaseItemVolume</FieldName>
+      <ObjectName>ItemSettings: 5</ObjectName>
+      <Value>Volume</Value>
+    </Volume>
+    <VolumeUOM>
+      <FieldName>VolumeUOM</FieldName>
+      <ObjectName>ItemSettings: 5</ObjectName>
+      <Value>VolumeUOM</Value>
+      <Commit>true</Commit>
+    </VolumeUOM>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 5</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 5</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 5</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </PackagingDimensions>
+  <GLAccounts xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>GL Accounts</DisplayName>
+    <ExpenseAccrualAccount>
+      <FieldName>InvtAcctID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>ExpenseAccrualAccount</Value>
+      <Commit>true</Commit>
+    </ExpenseAccrualAccount>
+    <ExpenseAccrualSub>
+      <FieldName>InvtSubID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>ExpenseAccrualSub</Value>
+    </ExpenseAccrualSub>
+    <ReasonCodeSub>
+      <FieldName>ReasonCodeSubID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>ReasonCodeSub</Value>
+    </ReasonCodeSub>
+    <ExpenseAccount>
+      <FieldName>COGSAcctID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>ExpenseAccount</Value>
+      <Commit>true</Commit>
+    </ExpenseAccount>
+    <ExpenseSub>
+      <FieldName>COGSSubID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>ExpenseSub</Value>
+    </ExpenseSub>
+    <POAccrualAccount>
+      <FieldName>POAccrualAcctID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>POAccrualAccount</Value>
+      <Commit>true</Commit>
+    </POAccrualAccount>
+    <POAccrualSub>
+      <FieldName>POAccrualSubID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>POAccrualSub</Value>
+    </POAccrualSub>
+    <SalesAccount>
+      <FieldName>SalesAcctID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>SalesAccount</Value>
+      <Commit>true</Commit>
+    </SalesAccount>
+    <SalesSub>
+      <FieldName>SalesSubID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>SalesSub</Value>
+    </SalesSub>
+    <PurchasePriceVarianceAccount>
+      <FieldName>PPVAcctID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>PurchasePriceVarianceAccount</Value>
+      <Commit>true</Commit>
+    </PurchasePriceVarianceAccount>
+    <PurchasePriceVarianceSub>
+      <FieldName>PPVSubID</FieldName>
+      <ObjectName>ItemSettings: 6</ObjectName>
+      <Value>PurchasePriceVarianceSub</Value>
+    </PurchasePriceVarianceSub>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 6</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 6</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 6</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </GLAccounts>
+  <Attributes xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Attributes</DisplayName>
+    <ImageUrl>
+      <FieldName>ImageUrl</FieldName>
+      <ObjectName>ItemSettings: 7</ObjectName>
+      <Value>ImageUrl</Value>
+      <Commit>true</Commit>
+    </ImageUrl>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 7</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 7</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 7</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </Attributes>
+  <Description xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Description</DisplayName>
+    <Content>
+      <FieldName>Body</FieldName>
+      <ObjectName>ItemSettings: 8</ObjectName>
+      <Value>Content</Value>
+      <Commit>true</Commit>
+    </Content>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 8</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 8</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 8</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </Description>
+  <DeferredRevenueRules xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Rules</DisplayName>
+    <DeferralCode>
+      <FieldName>DeferredCode</FieldName>
+      <ObjectName>ItemSettings: 9</ObjectName>
+      <Value>DeferralCode</Value>
+      <Commit>true</Commit>
+    </DeferralCode>
+    <SplitIntoComponents>
+      <FieldName>IsSplitted</FieldName>
+      <ObjectName>ItemSettings: 9</ObjectName>
+      <Value>SplitIntoComponents</Value>
+      <Commit>true</Commit>
+    </SplitIntoComponents>
+    <UseComponentSubaccounts>
+      <FieldName>UseParentSubID</FieldName>
+      <ObjectName>ItemSettings: 9</ObjectName>
+      <Value>UseComponentSubaccounts</Value>
+    </UseComponentSubaccounts>
+    <TotalPercentage>
+      <FieldName>TotalPercentage</FieldName>
+      <ObjectName>ItemSettings: 9</ObjectName>
+      <Value>TotalPercentage</Value>
+    </TotalPercentage>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ItemSettings: 9</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ItemSettings: 9</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ItemSettings: 9</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </DeferredRevenueRules>
+  <GeneralSettingsUnitOfMeasure xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Unit of Measure</DisplayName>
+    <FromUnit>
+      <FieldName>FromUnit</FieldName>
+      <ObjectName>itemunits</ObjectName>
+      <Value>FromUnit</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>FromUnit</FieldName>
+        <ObjectName>itemunits</ObjectName>
+        <Value>=[itemunits.FromUnit]</Value>
+      </LinkedCommand>
+    </FromUnit>
+    <MultiplyDivide>
+      <FieldName>UnitMultDiv</FieldName>
+      <ObjectName>itemunits</ObjectName>
+      <Value>MultiplyDivide</Value>
+    </MultiplyDivide>
+    <ConversionFactor>
+      <FieldName>UnitRate</FieldName>
+      <ObjectName>itemunits</ObjectName>
+      <Value>ConversionFactor</Value>
+    </ConversionFactor>
+    <ToUnitSampleToUnit>
+      <FieldName>SampleToUnit</FieldName>
+      <ObjectName>itemunits</ObjectName>
+      <Value>ToUnitSampleToUnit</Value>
+    </ToUnitSampleToUnit>
+    <ServiceCommands>
+      <KeyFromUnit>
+        <FieldName>FromUnit</FieldName>
+        <ObjectName>itemunits</ObjectName>
+        <Value>=[itemunits.FromUnit]</Value>
+      </KeyFromUnit>
+      <NewRow>
+        <ObjectName>itemunits</ObjectName>
+      </NewRow>
+      <RowNumber>
+        <ObjectName>itemunits</ObjectName>
+        <Value>LineNbr</Value>
+      </RowNumber>
+      <DeleteRow>
+        <ObjectName>itemunits</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>itemunits</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+    </ServiceCommands>
+  </GeneralSettingsUnitOfMeasure>
+  <DeferredRevenueRevenueComponents xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Revenue Components</DisplayName>
+    <InventoryID>
+      <FieldName>ComponentID</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>InventoryID</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>ComponentID</FieldName>
+        <ObjectName>Components</ObjectName>
+        <Value>=[Components.ComponentID]</Value>
+      </LinkedCommand>
+    </InventoryID>
+    <SalesAccount>
+      <FieldName>SalesAcctID</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>SalesAccount</Value>
+    </SalesAccount>
+    <SalesSub>
+      <FieldName>SalesSubID</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>SalesSub</Value>
+    </SalesSub>
+    <UOM>
+      <FieldName>UOM</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>UOM</Value>
+    </UOM>
+    <Quantity>
+      <FieldName>Qty</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>Quantity</Value>
+    </Quantity>
+    <DeferralCode>
+      <FieldName>DeferredCode</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>DeferralCode</Value>
+    </DeferralCode>
+    <AmountOption>
+      <FieldName>AmtOption</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>AmountOption</Value>
+    </AmountOption>
+    <FixedAmount>
+      <FieldName>FixedAmt</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>FixedAmount</Value>
+    </FixedAmount>
+    <Percentage>
+      <FieldName>Percentage</FieldName>
+      <ObjectName>Components</ObjectName>
+      <Value>Percentage</Value>
+    </Percentage>
+    <ServiceCommands>
+      <KeyInventoryID>
+        <FieldName>ComponentID</FieldName>
+        <ObjectName>Components</ObjectName>
+        <Value>=[Components.ComponentID]</Value>
+      </KeyInventoryID>
+      <NewRow>
+        <ObjectName>Components</ObjectName>
+      </NewRow>
+      <RowNumber>
+        <ObjectName>Components</ObjectName>
+        <Value>LineNbr</Value>
+      </RowNumber>
+      <DeleteRow>
+        <ObjectName>Components</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>Components</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+    </ServiceCommands>
+  </DeferredRevenueRevenueComponents>
+  <CrossReference xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Cross-Reference</DisplayName>
+    <Subitem>
+      <FieldName>SubItemID</FieldName>
+      <ObjectName>itemxrefrecords</ObjectName>
+      <Value>Subitem</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>AlternateID</FieldName>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>=[itemxrefrecords.AlternateID]</Value>
+        <LinkedCommand xsi:type="Key">
+          <FieldName>BAccountID</FieldName>
+          <ObjectName>itemxrefrecords</ObjectName>
+          <Value>=[itemxrefrecords.BAccountID]</Value>
+          <LinkedCommand xsi:type="Key">
+            <FieldName>AlternateType</FieldName>
+            <ObjectName>itemxrefrecords</ObjectName>
+            <Value>=[itemxrefrecords.AlternateType]</Value>
+            <LinkedCommand xsi:type="Key">
+              <FieldName>SubItemID</FieldName>
+              <ObjectName>itemxrefrecords</ObjectName>
+              <Value>=[itemxrefrecords.SubItemID]</Value>
+            </LinkedCommand>
+          </LinkedCommand>
+        </LinkedCommand>
+      </LinkedCommand>
+    </Subitem>
+    <AlternateType>
+      <FieldName>AlternateType</FieldName>
+      <ObjectName>itemxrefrecords</ObjectName>
+      <Value>AlternateType</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>AlternateID</FieldName>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>=[itemxrefrecords.AlternateID]</Value>
+        <LinkedCommand xsi:type="Key">
+          <FieldName>BAccountID</FieldName>
+          <ObjectName>itemxrefrecords</ObjectName>
+          <Value>=[itemxrefrecords.BAccountID]</Value>
+          <LinkedCommand xsi:type="Key">
+            <FieldName>AlternateType</FieldName>
+            <ObjectName>itemxrefrecords</ObjectName>
+            <Value>=[itemxrefrecords.AlternateType]</Value>
+            <LinkedCommand xsi:type="Key">
+              <FieldName>SubItemID</FieldName>
+              <ObjectName>itemxrefrecords</ObjectName>
+              <Value>=[itemxrefrecords.SubItemID]</Value>
+            </LinkedCommand>
+          </LinkedCommand>
+        </LinkedCommand>
+      </LinkedCommand>
+    </AlternateType>
+    <VendorCustomer>
+      <FieldName>BAccountID</FieldName>
+      <ObjectName>itemxrefrecords</ObjectName>
+      <Value>VendorCustomer</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>AlternateID</FieldName>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>=[itemxrefrecords.AlternateID]</Value>
+        <LinkedCommand xsi:type="Key">
+          <FieldName>BAccountID</FieldName>
+          <ObjectName>itemxrefrecords</ObjectName>
+          <Value>=[itemxrefrecords.BAccountID]</Value>
+          <LinkedCommand xsi:type="Key">
+            <FieldName>AlternateType</FieldName>
+            <ObjectName>itemxrefrecords</ObjectName>
+            <Value>=[itemxrefrecords.AlternateType]</Value>
+            <LinkedCommand xsi:type="Key">
+              <FieldName>SubItemID</FieldName>
+              <ObjectName>itemxrefrecords</ObjectName>
+              <Value>=[itemxrefrecords.SubItemID]</Value>
+            </LinkedCommand>
+          </LinkedCommand>
+        </LinkedCommand>
+      </LinkedCommand>
+    </VendorCustomer>
+    <AlternateID>
+      <FieldName>AlternateID</FieldName>
+      <ObjectName>itemxrefrecords</ObjectName>
+      <Value>AlternateID</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>AlternateID</FieldName>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>=[itemxrefrecords.AlternateID]</Value>
+        <LinkedCommand xsi:type="Key">
+          <FieldName>BAccountID</FieldName>
+          <ObjectName>itemxrefrecords</ObjectName>
+          <Value>=[itemxrefrecords.BAccountID]</Value>
+          <LinkedCommand xsi:type="Key">
+            <FieldName>AlternateType</FieldName>
+            <ObjectName>itemxrefrecords</ObjectName>
+            <Value>=[itemxrefrecords.AlternateType]</Value>
+            <LinkedCommand xsi:type="Key">
+              <FieldName>SubItemID</FieldName>
+              <ObjectName>itemxrefrecords</ObjectName>
+              <Value>=[itemxrefrecords.SubItemID]</Value>
+            </LinkedCommand>
+          </LinkedCommand>
+        </LinkedCommand>
+      </LinkedCommand>
+    </AlternateID>
+    <Description>
+      <FieldName>Descr</FieldName>
+      <ObjectName>itemxrefrecords</ObjectName>
+      <Value>Description</Value>
+    </Description>
+    <ServiceCommands>
+      <KeySubitem>
+        <FieldName>SubItemID</FieldName>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>=[itemxrefrecords.SubItemID]</Value>
+      </KeySubitem>
+      <KeyAlternateType>
+        <FieldName>AlternateType</FieldName>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>=[itemxrefrecords.AlternateType]</Value>
+      </KeyAlternateType>
+      <KeyVendorCustomer>
+        <FieldName>BAccountID</FieldName>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>=[itemxrefrecords.BAccountID]</Value>
+      </KeyVendorCustomer>
+      <KeyAlternateID>
+        <FieldName>AlternateID</FieldName>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>=[itemxrefrecords.AlternateID]</Value>
+      </KeyAlternateID>
+      <NewRow>
+        <ObjectName>itemxrefrecords</ObjectName>
+      </NewRow>
+      <RowNumber>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>LineNbr</Value>
+      </RowNumber>
+      <DeleteRow>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>itemxrefrecords</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+    </ServiceCommands>
+  </CrossReference>
+  <VendorDetails xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Vendor Details</DisplayName>
+    <Active>
+      <FieldName>Active</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>Active</Value>
+    </Active>
+    <Default>
+      <FieldName>IsDefault</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>Default</Value>
+    </Default>
+    <VendorID>
+      <FieldName>VendorID</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>VendorID</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="NewRow">
+        <ObjectName>VendorItems</ObjectName>
+      </LinkedCommand>
+    </VendorID>
+    <VendorName>
+      <FieldName>Vendor__AcctName</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>VendorName</Value>
+    </VendorName>
+    <Location>
+      <FieldName>VendorLocationID</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>Location</Value>
+      <Commit>true</Commit>
+    </Location>
+    <PurchaseUnit>
+      <FieldName>PurchaseUnit</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>PurchaseUnit</Value>
+    </PurchaseUnit>
+    <VendorInventoryID>
+      <FieldName>VendorInventoryID</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>VendorInventoryID</Value>
+      <Commit>true</Commit>
+    </VendorInventoryID>
+    <CurrencyID>
+      <FieldName>CuryID</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>CurrencyID</Value>
+    </CurrencyID>
+    <LastVendorPrice>
+      <FieldName>LastPrice</FieldName>
+      <ObjectName>VendorItems</ObjectName>
+      <Value>LastVendorPrice</Value>
+    </LastVendorPrice>
+    <ServiceCommands>
+      <NewRow>
+        <ObjectName>VendorItems</ObjectName>
+      </NewRow>
+      <RowNumber>
+        <ObjectName>VendorItems</ObjectName>
+        <Value>LineNbr</Value>
+      </RowNumber>
+      <DeleteRow>
+        <ObjectName>VendorItems</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>VendorItems</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+    </ServiceCommands>
+  </VendorDetails>
+  <AttributesAttributes xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Attributes</DisplayName>
+    <Attribute>
+      <FieldName>AttributeID</FieldName>
+      <ObjectName>Answers</ObjectName>
+      <Value>Attribute</Value>
+    </Attribute>
+    <Required>
+      <FieldName>isRequired</FieldName>
+      <ObjectName>Answers</ObjectName>
+      <Value>Required</Value>
+    </Required>
+    <Value>
+      <FieldName>Value</FieldName>
+      <ObjectName>Answers</ObjectName>
+      <Value>Value</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>AttributeID</FieldName>
+        <ObjectName>Answers</ObjectName>
+        <Value>=[Answers.AttributeID]</Value>
+      </LinkedCommand>
+    </Value>
+    <ServiceCommands>
+      <KeyAttribute>
+        <FieldName>AttributeID</FieldName>
+        <ObjectName>Answers</ObjectName>
+        <Value>=[Answers.AttributeID]</Value>
+      </KeyAttribute>
+      <NewRow>
+        <ObjectName>Answers</ObjectName>
+      </NewRow>
+      <RowNumber>
+        <ObjectName>Answers</ObjectName>
+        <Value>LineNbr</Value>
+      </RowNumber>
+      <DeleteRow>
+        <ObjectName>Answers</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>Answers</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+    </ServiceCommands>
+  </AttributesAttributes>
+  <AttributesSalesCategories xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Sales Categories</DisplayName>
+    <Category>
+      <FieldName>CategoryID</FieldName>
+      <ObjectName>Category</ObjectName>
+      <Value>Category</Value>
+      <Commit>true</Commit>
+      <LinkedCommand xsi:type="Key">
+        <FieldName>CategoryID</FieldName>
+        <ObjectName>Category</ObjectName>
+        <Value>=[Category.CategoryID]</Value>
+      </LinkedCommand>
+    </Category>
+    <ServiceCommands>
+      <KeyCategory>
+        <FieldName>CategoryID</FieldName>
+        <ObjectName>Category</ObjectName>
+        <Value>=[Category.CategoryID]</Value>
+      </KeyCategory>
+      <NewRow>
+        <ObjectName>Category</ObjectName>
+      </NewRow>
+      <RowNumber>
+        <ObjectName>Category</ObjectName>
+        <Value>LineNbr</Value>
+      </RowNumber>
+      <DeleteRow>
+        <ObjectName>Category</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>Category</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+    </ServiceCommands>
+  </AttributesSalesCategories>
+  <SpecifyNewID xmlns="http://www.acumatica.com/typed/">
+    <DisplayName>Specify New ID</DisplayName>
+    <InventoryID>
+      <FieldName>CD</FieldName>
+      <ObjectName>ChangeIDDialog</ObjectName>
+      <Value>InventoryID</Value>
+      <Commit>true</Commit>
+    </InventoryID>
+    <ServiceCommands>
+      <DeleteRow>
+        <ObjectName>ChangeIDDialog</ObjectName>
+        <Commit>true</Commit>
+      </DeleteRow>
+      <DialogAnswer>
+        <ObjectName>ChangeIDDialog</ObjectName>
+        <Value>='Yes'</Value>
+      </DialogAnswer>
+      <Attachment>
+        <ObjectName>ChangeIDDialog</ObjectName>
+        <Value>Attachment</Value>
+      </Attachment>
+    </ServiceCommands>
+  </SpecifyNewID>
+</Content>

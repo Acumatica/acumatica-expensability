@@ -1,0 +1,64 @@
+﻿<core:LayoutAwarePage x:Class="Acumatica.ExpenseClaims.SupportFlyout"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                        xmlns:core="using:Acumatica.Core.Windows"
+                        xmlns:common="using:Acumatica.ExpenseClaims.Common"
+                        xmlns:ignore="http://www.ignore.com"
+                        xmlns:dxc="using:DevExpress.Core"
+                        xmlns:design="using:Acumatica.ExpenseClaims.Design"
+                        mc:Ignorable="d ignore"
+                        d:DesignHeight="768"
+                        d:DesignWidth="400">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    
+    <Border BorderBrush="{StaticResource BackgroundColorBrush}" BorderThickness="1,0,0,0">
+        <Grid Background="White" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Header area for panel -->
+            <Grid Background="{StaticResource BackgroundColorBrush}" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="40, 32, 17, 13">
+                    <Button Click="backButton_Click" Margin="0,3,0,0"  Style="{StaticResource SettingsBackButtonStyle}"/>
+                    <TextBlock Margin="10,0,0,0" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="24.6667" Text="Support" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="40,33,40,39">
+                <Grid.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="14" />
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <StackPanel>
+                    <TextBlock Text="Support for Acumatica is provided by your Value Added Reseller. Please contact your Value Added Reseller for any questions regarding your Acumatica ERP."  Foreground="Black" TextWrapping="Wrap"/>
+                    <TextBlock Margin="0,20,0,20" Text="For more information regarding this application, you may also contact Acumatica at info@acumatica.com." Foreground="Black" TextWrapping="Wrap"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1">
+                    <HyperlinkButton NavigateUri="http://www.acumatica.com" Content="www.acumatica.com" Foreground="{StaticResource BackgroundColorBrush}"/>
+                    <TextBlock Text="Copyright © 2012-2014 Acumatica" Foreground="Black" />
+                    <TextBlock Text="All Rights Reserved" Foreground="Black" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</core:LayoutAwarePage>

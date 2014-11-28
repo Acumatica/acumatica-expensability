@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SchemaFetcher.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SchemaFetcher_AR303000_Screen" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://acumatica.velixo.com/Soap/AR303000.asmx</Value>
+    </Setting>
+    <Setting Name="SchemaFetcher_EP203000_Screen" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://acumatica.velixo.com/Soap/EP203000.asmx</Value>
+    </Setting>
+    <Setting Name="SchemaFetcher_EP301000_Screen" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://acumatica.velixo.com/Soap/EP301000.asmx</Value>
+    </Setting>
+    <Setting Name="SchemaFetcher_IN202000_Screen" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://acumatica.velixo.com/Soap/IN202000.asmx</Value>
+    </Setting>
+    <Setting Name="SchemaFetcher_PM301000_Screen" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://acumatica.velixo.com/Soap/PM301000.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

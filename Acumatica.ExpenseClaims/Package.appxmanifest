@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="Acumatica.ExpensabilityforAcumatica5" Publisher="CN=5A51E696-D75B-4CE3-AF96-D6FB1AC2C7B1" Version="5.0.0.1" />
+  <Properties>
+    <DisplayName>Expensability for Acumatica 5</DisplayName>
+    <PublisherDisplayName>Acumatica</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <Description>The Expensability app for Acumatica is great at helping Acumatica users to quickly and easily submit, edit and review expense claims in their company’s cloud ERP (enterprise resource planning) system, on the fly.</Description>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Acumatica.ExpenseClaims.App">
+      <Extensions>
+        <Extension Category="windows.fileOpenPicker">
+          <FileOpenPicker>
+            <SupportedFileTypes>
+              <SupportsAnyFileType />
+            </SupportedFileTypes>
+          </FileOpenPicker>
+        </Extension>
+        <Extension Category="windows.search" />
+      </Extensions>
+      <m2:VisualElements DisplayName="Expensability for Acumatica 5" Description="The Expensability app is great at helping Acumatica users to quickly and easily submit, edit and review expense claims in their company’s cloud ERP (enterprise resource planning) system, on the fly. You must have Acumatica Cloud ERP in use in your organization to use Expense It for Acumatica." BackgroundColor="#000033" ForegroundText="light" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png">
+        <m2:DefaultTile ShortName="Expensability 5" Wide310x150Logo="Assets\WideLogo.png">
+        </m2:DefaultTile>
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="portrait" />
+          <m2:Rotation Preference="landscape" />
+          <m2:Rotation Preference="portraitFlipped" />
+          <m2:Rotation Preference="landscapeFlipped" />
+        </m2:InitialRotationPreference>
+        <m2:SplashScreen BackgroundColor="#000033" Image="Assets\SplashScreen.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="picturesLibrary" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

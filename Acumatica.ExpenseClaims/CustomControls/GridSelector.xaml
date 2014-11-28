@@ -1,0 +1,46 @@
+﻿<editors:TextEdit
+    x:Class="Acumatica.ExpenseClaims.CustomControls.GridSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Acumatica.ExpenseClaims.CustomControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:editors="using:DevExpress.UI.Xaml.Editors"
+    mc:Ignorable="d"
+    d:DesignHeight="50"
+    d:DesignWidth="400">
+    
+    <editors:TextEdit.Resources>
+        <ResourceDictionary>
+            <ControlTemplate TargetType="ListView" x:Key="ListViewTemplate">
+                <ScrollViewer>
+                    <StackPanel>
+                        <ProgressBar IsIndeterminate="True" Height="15" Visibility="{Binding Loading, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <ItemsPresenter/>
+                    </StackPanel>
+                </ScrollViewer>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </editors:TextEdit.Resources>
+    
+    <editors:TextEdit.Buttons>
+            <editors:PopupButtonInfo
+                        GlyphKind="DropDown"
+                        VerticalContentAlignment="Center" >
+            <editors:PopupButtonInfo.PopupSettings>
+                <editors:PopupSettings
+                                PopupAutoWidth="True"
+                                PopupMaxHeight="500"
+                                PostEditValue="False">
+                    <editors:PopupSettings.PopupContent>
+                        <ListView  Template="{StaticResource ListViewTemplate}"
+                                    ItemsSource="{Binding ItemsSource}" ItemTemplate="{Binding ItemTemplate}"
+                                    SelectedValue="{Binding SelectedValue, Mode=TwoWay}" SelectedValuePath="{Binding SelectedValuePath}"
+                                    IsSynchronizedWithCurrentItem="False" SelectionChanged="ListViewControl_SelectionChanged">
+                        </ListView>
+                    </editors:PopupSettings.PopupContent>
+                </editors:PopupSettings>
+            </editors:PopupButtonInfo.PopupSettings>
+        </editors:PopupButtonInfo>
+    </editors:TextEdit.Buttons>
+</editors:TextEdit>

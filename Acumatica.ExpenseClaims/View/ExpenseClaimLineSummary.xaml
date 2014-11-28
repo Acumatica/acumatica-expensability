@@ -1,0 +1,89 @@
+﻿<UserControl
+    x:Class="Acumatica.ExpenseClaims.ExpenseClaimLineSummary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:core="using:Acumatica.Core.Windows"
+        xmlns:ctl="using:Acumatica.Core.Windows.Controls"
+        xmlns:common="using:Acumatica.ExpenseClaims.Common"
+        xmlns:ignore="http://www.ignore.com"
+        xmlns:dxc="using:DevExpress.Core"
+        xmlns:editors="using:DevExpress.UI.Xaml.Editors"
+        xmlns:layout="using:DevExpress.UI.Xaml.Layout"
+        xmlns:grid="using:DevExpress.UI.Xaml.Grid"
+        xmlns:c="using:Acumatica.ExpenseClaims.Converters"
+        xmlns:h="using:Acumatica.Core.Windows.Helpers"
+        xmlns:design="using:Acumatica.ExpenseClaims.Design"
+        xmlns:controls="using:Acumatica.ExpenseClaims.CustomControls"
+        xmlns:local="using:Acumatica.ExpenseClaims"
+        mc:Ignorable="d ignore"
+        d:DesignHeight="768"
+        d:DesignWidth="320">
+
+    <layout:LayoutGroup Width="320" Orientation="Vertical">
+        <layout:LayoutItem Header="Date:" HeaderPosition="Top" IsEnabled="{Binding Path=Model.AllowEdit, Mode=OneWay}" Padding="0,0,0,20">
+            <ctl:DatePicker SelectedDate="{Binding Model.Date, Mode=TwoWay}"/>
+        </layout:LayoutItem>
+        <layout:LayoutItem Header="Ref. Nbr.:" HeaderPosition="Top" IsEnabled="{Binding Path=Model.AllowEdit, Mode=OneWay}" Padding="0,0,0,20">
+            <editors:TextEdit EditValue="{Binding Model.RefNbr, Mode=TwoWay}">
+            </editors:TextEdit>
+        </layout:LayoutItem>
+        <layout:LayoutItem Header="Expense ID:" HeaderPosition="Top"  IsEnabled="{Binding Path=Model.AllowEdit, Mode=OneWay}" Padding="0,0,0,20">
+            <controls:GridSelector EditValue="{Binding Model.ExpenseId, Mode=TwoWay}" ItemsSource="{Binding ExpenseItems}"  Loading="{Binding ExpenseItems.Loading}" SelectedValuePath="InventoryID">
+                <dxc:Interaction.Behaviors>
+                    <common:ValidationBehavior Service="{Binding ValidationService}" Rule="{Binding ExpenseIdValidation}"  />
+                    <dxc:EventToCommand EventName="PopupOpened" Command="{Binding LoadExpenseItemsCommand}" />
+                    <dxc:EventToCommand EventName="ItemSelected" Command="{Binding RefreshExpenseItemDescriptionCommand}" />
+                </dxc:Interaction.Behaviors>
+                <controls:GridSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontWeight="Bold" Text="{Binding InventoryID}"/>
+                            <TextBlock Text="{Binding Description}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </controls:GridSelector.ItemTemplate>
+            </controls:GridSelector>
+        </layout:LayoutItem>
+        <layout:LayoutItem Header="Description:" HeaderPosition="Top" IsEnabled="{Binding Path=Model.AllowEdit, Mode=OneWay}" Padding="0,0,0,20">
+            <editors:TextEdit EditValue="{Binding Model.Description, Mode=TwoWay}">
+                <dxc:Interaction.Behaviors>
+                    <common:ValidationBehavior Service="{Binding ValidationService}" Rule="{Binding LineDescriptionValidation}"  />
+                </dxc:Interaction.Behaviors>
+            </editors:TextEdit>
+        </layout:LayoutItem>
+        <layout:LayoutGroup Orientation="Horizontal">
+            <layout:LayoutItem Header="Quantity:" HeaderPosition="Top"  IsEnabled="{Binding Path=Model.AllowEdit, Mode=OneWay}" Padding="0,0,10,20">
+                <editors:TextEdit EditValue="{Binding Model.Quantity, Mode=TwoWay}">
+                    <editors:TextEdit.TextInputSettings>
+                        <editors:TextInputMaskSettings Mask="n" MaskType="Numeric"/>
+                    </editors:TextEdit.TextInputSettings>
+                </editors:TextEdit>
+            </layout:LayoutItem>
+            <layout:LayoutItem Header="Unit Cost:" HeaderPosition="Top" IsEnabled="{Binding Path=Model.AllowEdit, Mode=OneWay}" Padding="10,0,0,20">
+                <editors:TextEdit EditValue="{Binding Model.UnitCost, Mode=TwoWay}">
+                    <editors:TextEdit.TextInputSettings>
+                        <editors:TextInputMaskSettings Mask="c" MaskType="Numeric"/>
+                    </editors:TextEdit.TextInputSettings>
+                </editors:TextEdit>
+            </layout:LayoutItem>
+        </layout:LayoutGroup>
+        <layout:LayoutGroup Orientation="Horizontal">
+            <layout:LayoutItem Header="Total:" HeaderPosition="Top" IsEnabled="{Binding Path=Model.AllowEdit, Mode=OneWay}" Padding="0,0,10,20">
+                <editors:TextEdit EditValue="{Binding Model.Total, Mode=TwoWay}">
+                    <editors:TextEdit.TextInputSettings>
+                        <editors:TextInputMaskSettings Mask="c" MaskType="Numeric"/>
+                    </editors:TextEdit.TextInputSettings>
+                </editors:TextEdit>
+            </layout:LayoutItem>
+            <layout:LayoutItem Header="Employee Part:" HeaderPosition="Top" IsEnabled="{Binding Path=Model.AllowEdit, Mode=OneWay}" Padding="10,0,0,20">
+                <editors:TextEdit EditValue="{Binding Model.EmployeePart, Mode=TwoWay}">
+                    <editors:TextEdit.TextInputSettings>
+                        <editors:TextInputMaskSettings Mask="c" MaskType="Numeric"/>
+                    </editors:TextEdit.TextInputSettings>
+                </editors:TextEdit>
+            </layout:LayoutItem>
+        </layout:LayoutGroup>
+    </layout:LayoutGroup>
+</UserControl>
