@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="Acumatica.ExpensabilityforAcumatica5" Publisher="CN=5A51E696-D75B-4CE3-AF96-D6FB1AC2C7B1" Version="5.0.0.1" />
+  <Identity Name="Acumatica.ExpensabilityforAcumatica5" Publisher="CN=5A51E696-D75B-4CE3-AF96-D6FB1AC2C7B1" Version="5.0.0.3" />
   <Properties>
     <DisplayName>Expensability for Acumatica 5</DisplayName>
     <PublisherDisplayName>Acumatica</PublisherDisplayName>

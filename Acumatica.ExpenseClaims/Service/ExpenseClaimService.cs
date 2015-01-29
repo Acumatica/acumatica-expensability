@@ -81,7 +81,7 @@ namespace Acumatica.ExpenseClaims.Service
                 commands.Add(new Value { Value = line.Billable.ToString(), LinkedCommand = schema.ExpenseClaimDetails.Billable });
                 commands.Add(new Value { Value = line.Customer, LinkedCommand = schema.ExpenseClaimDetails.Customer });
                 commands.Add(new Value { Value = line.Location, LinkedCommand = schema.ExpenseClaimDetails.Location });
-                commands.Add(new Value { Value = line.Project, LinkedCommand = schema.ExpenseClaimDetails.ProjectContract });
+                commands.Add(new Value { Value = String.IsNullOrEmpty(line.Project) ? "X" : line.Project, LinkedCommand = schema.ExpenseClaimDetails.ProjectContract }); // Non-project code should be fetched from PM Preferences -- this is a shortcut
                 commands.Add(new Value { Value = line.ProjectTask, LinkedCommand = schema.ExpenseClaimDetails.ProjectTask });
                 commands.Add(new Value { Value = line.NoteText, LinkedCommand = schema.ExpenseClaimDetails.NoteText });
                 commands.Add(new Value { Value = line.RefNbr, LinkedCommand = schema.ExpenseClaimDetails.RefNbr, Commit = true });
